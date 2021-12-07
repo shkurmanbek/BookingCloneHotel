@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/subtitleTv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/sansita"
+        android:text="IHotel"
+        android:textSize="48sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitleTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emailEt"
+        android:text="e-mail address:"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/sansita"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_edittext01"
+        android:fontFamily="@font/sansita"
+        android:paddingHorizontal="58dp"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:paddingVertical="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitleTv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEt"
+        android:text="Enter your password:"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/sansita"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitleTv2"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_edittext01"
+        android:fontFamily="@font/sansita"
+        android:inputType="textPassword"
+        android:paddingHorizontal="58dp"
+        android:paddingVertical="5dp"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/signinBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordEt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_button01"
+        android:fontFamily="@font/sansita"
+        android:paddingHorizontal="58dp"
+        android:text="sign in"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

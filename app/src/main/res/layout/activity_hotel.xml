@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HotelActivity">
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="5dp"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="15dp"
+        android:background="@drawable/shape_edittext01"/>
+
+    <RelativeLayout
+        android:id="@+id/scrollRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchEt"
+        android:layout_marginHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/i1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Modern View of Planty Park"
+            android:layout_above="@id/i2"
+            />
+        <ImageView
+            android:id="@+id/i2"
+            android:layout_width="217dp"
+            android:layout_height="151dp"
+            android:layout_below="@+id/i1"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/image2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Four Elements"
+            android:layout_above="@id/i3"
+            />
+        <ImageView
+            android:id="@+id/i3"
+            android:layout_width="221dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/i2"
+            android:src="@drawable/image3" />
+
+        <ImageView
+            android:id="@+id/i4"
+            android:layout_width="216dp"
+            android:layout_height="142dp"
+            android:layout_below="@+id/i3"
+            android:src="@drawable/image4" />
+
+        <TextView
+            android:layout_width="247dp"
+            android:layout_height="474dp"
+            android:layout_above="@id/i5"
+            android:layout_marginBottom="-165dp"
+            android:text="Mordecai Twelve" />
+
+        <ImageView
+            android:id="@+id/i5"
+            android:layout_width="225dp"
+            android:layout_height="152dp"
+            android:layout_below="@+id/i4"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/image5" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "456094849120",
+    "project_id": "medina-app-dab33",
+    "storage_bucket": "medina-app-dab33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456094849120:android:16b058fe38c518e3118b05",
+        "android_client_info": {
+          "package_name": "com.example.medinahotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456094849120-fa8ib3ftkkds6suurlgtg1l4741f8bo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdPgkd6nNctxlxWpN0cIkLsDToOuc_-_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456094849120-fa8ib3ftkkds6suurlgtg1l4741f8bo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
