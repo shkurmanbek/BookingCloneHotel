@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/primary"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/imageUrl"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/primary">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image1" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageUrl"
+            android:maxLines="1"
+            android:text="Article" />
+
+        <TextView
+            android:id="@+id/descriptionTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTv"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/priceTv"
+            android:layout_toEndOf="@+id/imageUrl"
+            android:maxLines="6" />
+
+        <TextView
+            android:id="@+id/barcodeTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionTv"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/priceTv"
+            android:layout_toEndOf="@+id/imageUrl"
+            android:maxLines="1"
+            android:text="Barcode" />
+
+        <TextView
+            android:id="@+id/priceTv"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-1dp"
+            android:text="5000tg/day"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/categoryTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barcodeTv"
+            android:layout_toEndOf="@+id/imageUrl"
+            android:maxLines="1"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/sizeTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/imageUrl"
+            android:maxLines="1"
+            android:text="S, M, L, XL, XXL" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:maxLines="1"
+            android:text="dd/mm/yyyy"
+            android:textAlignment="center" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

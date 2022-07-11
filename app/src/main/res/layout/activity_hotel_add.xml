@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".HotelAddActivity">
+
+    <!--    Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/sansita"
+            android:text="IHotel"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/attachPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_photo" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/toolbar2Rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26sp"
+        android:layout_below="@id/toolbarRl">
+        <TextView
+            android:id="@+id/hotelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Add a new Hotel"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sansita"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+        <EditText
+            android:id="@+id/articleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/hotelTv"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/white"
+            android:hint="Article"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:textColor="@color/white"/>
+
+
+        <EditText
+            android:id="@+id/descriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/articleEt"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:hint="Description"
+            android:maxHeight="35dp"
+            android:padding="10dp"
+            android:textColor="@color/white" />
+
+
+        <EditText
+            android:id="@+id/sizeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionEt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:hint="Location"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/priceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sizeEt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:text="Price"
+            android:textSize="24dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/barcodeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceEt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:hint="City"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barcodeEt"
+            android:layout_marginVertical="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_edittext01"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="+ Category"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTv"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="monospace"
+            android:text="+ Add"
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+        </RelativeLayout>

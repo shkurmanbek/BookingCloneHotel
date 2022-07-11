@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".CategoryAddActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin= "10dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sansita"
+            android:text="Add a new Type"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp">
+
+
+        <EditText
+            android:id="@+id/categoryEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:hint="Category title"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/primary" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryEt"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button01"
+            android:minHeight="50dp"
+            android:fontFamily="@font/sansita"
+            android:textSize="28dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/primary" />
+
+    </RelativeLayout>
+</RelativeLayout>

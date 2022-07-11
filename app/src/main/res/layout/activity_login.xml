@@ -34,6 +34,7 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
+        android:text="medina@mail.ru"
         android:id="@+id/emailEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,9 +42,9 @@
         android:background="@drawable/shape_edittext01"
         android:fontFamily="@font/sansita"
         android:paddingHorizontal="58dp"
-        android:textAllCaps="false"
-        android:textColor="@color/primary"
         android:paddingVertical="5dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -61,6 +62,7 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
+        android:text="123456"
         android:id="@+id/passwordEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +74,7 @@
         android:paddingHorizontal="58dp"
         android:paddingVertical="5dp"
         android:textAllCaps="false"
-        android:textColor="@color/primary"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

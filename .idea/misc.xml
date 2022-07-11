@@ -3,12 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/drawable/background_shape01.xml" value="0.2703125" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/drawable/ic_account.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/drawable/shape_button01.xml" value="0.2703125" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/drawable/shape_edittext01.xml" value="0.2703125" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_account.xml" value="0.4" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_category_add.xml" value="0.4" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_dashboard_user.xml" value="0.264" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_hotel.xml" value="0.264" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_hotel_add.xml" value="0.264" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_image_list.xml" value="0.264" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_reserve_hotel.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/row_hotel.xml" value="0.264" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/row_type.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shynggys/AndroidStudioProjects/MedinaHotel/app/src/main/res/layout/row_user_hotel.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>

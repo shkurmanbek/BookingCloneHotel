@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".DashboardUserActivity">
+
+ <TextView
+     android:id="@+id/mainTv"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginHorizontal="50dp"
+     android:layout_marginTop="30dp"
+     android:background="@drawable/shape_edittext01"
+     android:fontFamily="@font/sansita"
+     android:text="Hello"
+     android:textAlignment="center"
+     android:textColor="@color/white"
+     android:textSize="32sp" />
+ <TextView
+     android:id="@+id/subTitleTv2"
+     android:layout_below="@id/mainTv"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginHorizontal="50dp"
+     android:layout_marginTop="30dp"
+     android:background="@drawable/shape_edittext01"
+     android:fontFamily="@font/sansita"
+     android:text="Welcome to IHotel App"
+     android:textAlignment="center"
+     android:textColor="@color/white"
+     android:textSize="32sp" />
+
+ <EditText
+     android:id="@+id/searchEt"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/subTitleTv2"
+     android:layout_marginStart="15dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginEnd="15dp"
+     android:layout_marginBottom="10dp"
+     android:background="@drawable/shape_edittext01"
+     android:drawableStart="@drawable/ic_baseline_search_24"
+     android:drawablePadding="15dp"
+     android:padding="10dp" />
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/categoriesRv"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_below="@id/searchEt"
+     android:layout_marginStart="5dp"
+     android:layout_marginTop="5dp"
+     android:layout_marginEnd="5dp"
+     android:layout_marginBottom="5dp"
+     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+     tools:listitem="@layout/row_user_hotel" />
+</RelativeLayout>

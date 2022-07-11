@@ -8,7 +8,10 @@ import android.util.Patterns
 import android.widget.Toast
 import com.example.medinahotel.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
@@ -88,6 +91,7 @@ class SignupActivity : AppCompatActivity() {
         hashMap["name"] = name
         hashMap["password"] = password
         hashMap["timestamp"] = timestamp
+        hashMap["userType"] = "user"
 
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child(uid!!)
@@ -95,11 +99,37 @@ class SignupActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 progressDialog.dismiss()
                 Toast.makeText(this, "Created Successfully...", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,HotelActivity::class.java))
+                checkUser()
             }
             .addOnFailureListener { e->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Failed to Create Account due to${e.message}...", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun checkUser() {
+        progressDialog.setMessage("Checking wait...")
+        val firebaseUser = firebaseAuth.currentUser!!
+
+        val ref = FirebaseDatabase.getInstance().getReference("Users")
+        ref.child(firebaseUser.uid)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    progressDialog.dismiss()
+                    val userType = snapshot.child("userType").value
+                    if (userType == "user"){
+                        startActivity(Intent(this@SignupActivity, DashboardUserActivity::class.java))
+                        finish()
+                    }
+                    else if (userType == "admin"){
+                        val intent = Intent(this@SignupActivity,HotelActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 }

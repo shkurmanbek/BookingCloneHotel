@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import com.example.medinahotel.databinding.ActivityDashboardUserBinding
 import com.example.medinahotel.databinding.ActivityHotelBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -13,9 +14,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.Exception
 
-
-class HotelActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHotelBinding
+class DashboardUserActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDashboardUserBinding
 
     private lateinit var  categoryArrayList: ArrayList<ModelCategory>
 
@@ -25,11 +25,11 @@ class HotelActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHotelBinding.inflate(layoutInflater)
-
+        binding = ActivityDashboardUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        loadCategories()
+
         firebaseAuth = FirebaseAuth.getInstance()
+        loadCategories()
 
         binding.searchEt.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -48,15 +48,6 @@ class HotelActivity : AppCompatActivity() {
 
             }
         })
-
-        binding.addCategoryBtn.setOnClickListener {
-            startActivity(Intent(this, CategoryAddActivity::class.java))
-        }
-        binding.addClothesBtn.setOnClickListener {
-            startActivity(Intent(this, HotelAddActivity::class.java))
-        }
-
-
     }
 
     private fun loadCategories() {
@@ -74,8 +65,8 @@ class HotelActivity : AppCompatActivity() {
                     var model = ds.getValue(ModelCategory::class.java)
                     categoryArrayList.add(model!!)
                 }
-                //Setup adapter
-                adapterCategory = AdapterCategory(this@HotelActivity, categoryArrayList)
+                //setup adapter
+                adapterCategory = AdapterCategory(this@DashboardUserActivity, categoryArrayList)
                 binding.categoriesRv.adapter = adapterCategory
             }
 

@@ -56,12 +56,33 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 progressDialog.dismiss()
-                startActivity(Intent(this@LoginActivity,HotelActivity::class.java))
+                checkUser()
             }
             .addOnFailureListener { e->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Login Failed to Create Account due to${e.message}...", Toast.LENGTH_SHORT).show()
             }
+    }
+    private fun checkUser() {
+        progressDialog.setMessage("Checking wait...")
+        val firebaseUser = firebaseAuth.currentUser!!
 
+        val ref = FirebaseDatabase.getInstance().getReference("Users")
+        ref.child(firebaseUser.uid)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    progressDialog.dismiss()
+                    val userType = snapshot.child("userType").value
+                    if (userType == "user"){
+                        startActivity(Intent(this@LoginActivity, DashboardUserActivity::class.java))
+                    }
+                    else if (userType == "admin"){
+                        startActivity(Intent(this@LoginActivity,HotelActivity::class.java))
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 }

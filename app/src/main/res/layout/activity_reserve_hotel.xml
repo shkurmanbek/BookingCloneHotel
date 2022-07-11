@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".ReserveHotelActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/sansita"
+            android:text="Reserve Hotel"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_below="@id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/sansita"
+            android:text="Reserve Hotel"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbarRl"
+        android:gravity="center"
+        android:layout_marginHorizontal="80dp">
+        <EditText
+            android:id="@+id/hotelNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:textAllCaps="false"
+            android:hint="Hotel name"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:textAllCaps="false"
+            android:hint="Your name"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/cityEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:hint="City"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/locationEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:hint="Location"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/categoryEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:hint="Category"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/priceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:hint="Price"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:fontFamily="@font/sansita"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:hint="Days"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button01"
+            android:fontFamily="@font/sansita"
+            android:paddingHorizontal="58dp"
+            android:text="reserve"
+            android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
